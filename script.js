@@ -1,3 +1,5 @@
+function calculate() {
+
 //Def. airports
 let airports = {};
 
@@ -7,9 +9,10 @@ fetch("airports.json")
     airports = data;
 });
 
-function calculate() {
-
-
+if (Object.keys(airports).length === 0) {
+    alert("Airport database still loading.");
+    return;
+}
 //Def. route
 let from = document.getElementById("from").value.replace(/\s+/g,"").toUpperCase()
 let to = document.getElementById("to").value.replace(/\s+/g,"").toUpperCase()
@@ -54,6 +57,7 @@ document.getElementById("Distance").innerText = message2;
 document.getElementById("Time").innerText = message3;
 document.getElementById("container").style.display = "block";
 }
+
 
 
 
