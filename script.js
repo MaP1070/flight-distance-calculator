@@ -9,10 +9,6 @@ fetch("airports.json")
 
 function calculate() {
 
-if (Object.keys(airports).length === 0) {
-    alert("Airport database still loading, try again in a moment.");
-    return;
-}
 
 //Def. route
 let from = document.getElementById("from").value.replace(/\s+/g,"").toUpperCase()
@@ -58,6 +54,7 @@ document.getElementById("Distance").innerText = message2;
 document.getElementById("Time").innerText = message3;
 document.getElementById("container").style.display = "block";
 }
+
 
 
 
