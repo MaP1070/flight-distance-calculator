@@ -1,5 +1,3 @@
-function calculate() {
-
 //Def. airports
 let airports = {};
 
@@ -8,6 +6,8 @@ fetch("airports.json")
 .then(data => {
     airports = data;
 });
+
+function calculate() {
 
 if (Object.keys(airports).length === 0) {
     alert("Airport database still loading.");
@@ -57,6 +57,7 @@ document.getElementById("Distance").innerText = message2;
 document.getElementById("Time").innerText = message3;
 document.getElementById("container").style.display = "block";
 }
+
 
 
 
