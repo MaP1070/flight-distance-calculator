@@ -10,8 +10,8 @@ fetch("airports.json")
 function calculate() {
 
 //Def. route
-let from = document.getElementById("from").value.replace(/\s+/g,"").toUpperCase()
-let to = document.getElementById("to").value.replace(/\s+/g,"").toUpperCase()
+let from = document.getElementById("from").value.trim.replace(/\s+/g,"").toUpperCase()
+let to = document.getElementById("to").value.trim.replace(/\s+/g,"").toUpperCase()
 
 
 
@@ -55,5 +55,6 @@ document.getElementById("Distance").innerText = message2;
 document.getElementById("Time").innerText = message3;
 document.getElementById("container").style.display = "block";
 }
+
 
 
