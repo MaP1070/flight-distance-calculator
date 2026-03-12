@@ -32,8 +32,8 @@ let lat2 = destination.lat*Math.PI/180
 let lon2 = destination.lon*Math.PI/180
 
 //Def. dLat and dLon
-let dLat = lat1-lat2
-let dLon = lon1-lon2
+let dLat = lat1 - lat2
+let dLon = lon1 - lon2
 
 //Haversine Form. 
  let a = Math.sin(dLat/2)**2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon/2)**2
@@ -57,6 +57,7 @@ document.getElementById("Distance").innerText = message2;
 document.getElementById("Time").innerText = message3;
 document.getElementById("container").style.display = "block";
 }
+
 
 
 
