@@ -15,7 +15,11 @@ resultsBox.innerHTML = ""
     
 if(query.lenght < 2) return 
     
+let count = 0    
+    
 for(let code in airports){
+
+if(count >= 10) break
     
 let airport = airports[code]
 
@@ -28,7 +32,7 @@ airport.country.toLowerCase().includes(query)
 
 let div = document.createElement("div")
 div.className = "result-item"
-div.innerText = code + "-" + airport.name
+div.innerText = code + " - " + airport.city + "(" + airport.name + ")"
 
 div.onclick = function(){
 document.getElementById(inputId).value = code
@@ -36,6 +40,9 @@ resultsBox.innerHTML = ""
 }
 
 resultsBox.appendChild(div)
+
+count++
+    
 }
 }
 }
@@ -96,6 +103,7 @@ document.getElementById("from").addEventListener("input", function(){
 document.getElementById("to").addEventListener("input", function(){
     searchAirport("to", "to-results")
 })
+
 
 
 
