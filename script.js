@@ -58,6 +58,8 @@ document.getElementById("Time").innerText = message3;
 document.getElementById("container").style.display = "block";
 }
 
+function searchAirport(inputId, resultsId){
+let query
 
 
 
