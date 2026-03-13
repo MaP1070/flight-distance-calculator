@@ -8,12 +8,12 @@ fetch("airports.json")
 });
 
 function searchAirport(inputId, resultsId){
-let query = document.getElementById(input.Id).value.toLowerCase()
-let resultsBox = document.getElement.ById(resultsId)
+let query = document.getElementById(inputId).value.toLowerCase()
+let resultsBox = document.getElementById(resultsId)
     
 resultsBox.innerHTML = ""
     
-if(query.lengh < 2) return 
+if(query.lenght < 2) return 
     
 for(let code in airports){
     
@@ -36,12 +36,6 @@ resultsBox.innerHTML = ""
 resultsBox.appendChild(div)
 }
 }
-    document.getElementById("from").addEventListener("input", function(){
-    searchAirport("from", "from-results")
-})
-document.getElementById("to").addEventListener("input", function(){
-    searchAirport("to", "to-results")
-})
 }
 
 function calculate() {
@@ -93,7 +87,14 @@ document.getElementById("Route").innerText = message1;
 document.getElementById("Distance").innerText = message2;
 document.getElementById("Time").innerText = message3;
 document.getElementById("container").style.display = "block";
+document.getElementById("from").addEventListener("input", function(){
+    searchAirport("from", "from-results")
+})
+document.getElementById("to").addEventListener("input", function(){
+    searchAirport("to", "to-results")
+})
 }
+
 
 
 
