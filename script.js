@@ -36,6 +36,12 @@ resultsBox.innerHTML = ""
 resultsBox.appendChild(div)
 }
 }
+    document.getElementById("from").addEventListener("input", function(){
+    searchAirport("from", "from-results")
+})
+document.getElementById("to").addEventListener("input", function(){
+    searchAirport("to", "to-results")
+})
 }
 
 function calculate() {
@@ -87,12 +93,7 @@ document.getElementById("Route").innerText = message1;
 document.getElementById("Distance").innerText = message2;
 document.getElementById("Time").innerText = message3;
 document.getElementById("container").style.display = "block";
-document.getElementById("from").addEventListener("input", function(){
-    searchAirport("from", "from-results")
-})
-document.getElementById("to").addEventListener("input", function(){
-    searchAirport("to", "to-results")
-})
 }
+
 
 
