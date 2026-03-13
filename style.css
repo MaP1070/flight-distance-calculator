@@ -53,5 +53,23 @@ div:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+.results{
+width:300px;
+margin:auto;
+background:white;
+border:1px solid #ccc;
+text-align:left;
+}
+
+.result-item{
+padding:8px;
+cursor:pointer;
+}
+
+.result.item:hoover{
+background:#eee;
+}
+
+
 
 
