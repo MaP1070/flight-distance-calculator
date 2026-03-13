@@ -7,6 +7,37 @@ fetch("airports.json")
     airports = data;
 });
 
+function searchAirport(inputId, resultsId){
+let query = document.getElementById(input.Id).value.toLowerCase()
+let resultsBox = document.getElement.ById(resultsId)
+    
+resultsBox.innerHTML = ""
+    
+if(query.lengh < 2) return 
+    
+for(let code in airports){
+    
+let airport = airports[code]
+
+if(
+code.toLowerCase().includes(query) ||
+airport.name.toLowerCase().includes(query)
+){
+
+let div = document.createElement("div")
+div.className = "result-item"
+div.innerText = code + "-" + airport.name
+
+div.onclick = function(){
+document.getElementById(inputId).value = code
+resultsBox.innerHTML = ""
+}
+
+resultsBox.appendChild(div)
+}
+}
+}
+
 function calculate() {
 
 if (Object.keys(airports).length === 0) {
@@ -57,15 +88,4 @@ document.getElementById("Distance").innerText = message2;
 document.getElementById("Time").innerText = message3;
 document.getElementById("container").style.display = "block";
 }
-
-function searchAirport(inputId, resultsId){
-let query
-
-
-
-
-
-
-
-
 
