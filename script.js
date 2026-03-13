@@ -22,6 +22,8 @@ let airport = airports[code]
 if(
 code.toLowerCase().includes(query) ||
 airport.name.toLowerCase().includes(query)
+airport.city.toLowerCase().includes(query)
+airport.country.toLowerCase().includes(query)
 ){
 
 let div = document.createElement("div")
@@ -94,6 +96,7 @@ document.getElementById("from").addEventListener("input", function(){
 document.getElementById("to").addEventListener("input", function(){
     searchAirport("to", "to-results")
 })
+
 
 
 
